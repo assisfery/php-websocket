@@ -2,6 +2,8 @@
 
 A simple chat using websocket in PHP and JavaScript
 
+![chat show case image](/showcase.png)
+
 ### Steps to test:
 - Make repository clone 
 ```
@@ -21,4 +23,9 @@ composer install
 - Run the server
 ```
 php server.php
+```
+
+- Open the chat.html in your local server
+```
+/php-websocket/chat.html
 ```
