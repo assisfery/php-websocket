@@ -25,9 +25,8 @@ class MyChat implements MessageComponentInterface {
 
     public function onMessage(ConnectionInterface $from, $msg) {
         foreach ($this->clients as $client) {
-            if ($from != $client) {
-                $client->send($msg);
-            }
+            //if ($from != $client)
+               $client->send($msg);
         }
     }
 
@@ -42,7 +41,5 @@ class MyChat implements MessageComponentInterface {
 
 $app = new Ratchet\App('localhost', 8080);
 $app->route('/chat', new MyChat, array('*'));
-$app->route('/echo', new Ratchet\Server\EchoServer, array('*'));
+//$app->route('/echo', new Ratchet\Server\EchoServer, array('*'));
 $app->run();
-
-echo "Ok";

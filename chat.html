@@ -7,16 +7,59 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script type="text/javascript" src="chat.js"></script>
+
+	<style type="text/css">
+		
+		.box{
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		#chatroom{
+			display: none;
+		}
+
+		#message-box{
+			height: 300px;
+		}
+
+	</style>
 </head>
 <body>
 
 	<div class="container">
 
-		<h2>Chat</h2>
+		<h2 class="text-center">Chat</h2>
 
-		
+		<div id="login" class="box">
+			
+			<div>
+				<label>Username</label>
+				<input type="text" id="username" class="form-control">
+
+				<input type="submit" value="Entrar" class="btn btn-primary my-2" onclick="main()">
+			</div>
+
+		</div>
+
+		<div id="chatroom" class="box">
+
+			<div id="message-box">
+				
+
+
+			</div>
+
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="message..." id="message">
+				<div class="input-group-append">
+					<button class="btn btn-success" type="submit" onclick="sendMessage()">Send</button>
+				</div>
+			</div>
+
+		</div>
 
 	</div>
 
